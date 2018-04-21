@@ -5,7 +5,7 @@ var visualization;
 
 function drawVisualization() {
     var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1BhWtH6gLFCkWI2Z-35BdNZ9oAm8LcInuWrK3i_sspfs');
-    query.setQuery('SELECT A, B, W, X, Y, Z, AA order by AA desc label A "Nazwa Zastępu", B "Drużyna", W "Smak", X"Wygląd",Y "Okrzyk",Z "Kuchnia",AA"Konkurs Kulinarny" ');
+    query.setQuery('SELECT A, B, W, X, Y, Z, AA order by AA desc limit 35 label A "Nazwa Zastępu", B "Drużyna", W "Smak", X"Wygląd",Y "Okrzyk",Z "Kuchnia",AA"Konkurs Kulinarny" ');
     query.send(handleQueryResponse);
 }
 
